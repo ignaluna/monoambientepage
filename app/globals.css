@@ -3,25 +3,28 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --swiper-pagination-color: #ffffff;
+  --swiper-pagination-bullet-size: 10px;
+  --swiper-pagination-bullet-inactive-color: #999999;
+  --swiper-pagination-bullet-inactive-opacity: 0.5;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-black text-white;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.swiper-pagination-bullet {
+  @apply opacity-50 transition-opacity duration-300;
+}
+
+.swiper-pagination-bullet-active {
+  @apply opacity-100;
+}
+
+/* Estilos adicionales para mejorar la experiencia en dispositivos móviles */
+@media (max-width: 640px) {
+  .swiper-slide {
+    @apply overflow-y-auto;
   }
 }
+
