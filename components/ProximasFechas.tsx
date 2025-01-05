@@ -20,52 +20,7 @@ function EventSkeleton() {
 }
 
 async function EventosCalendario() {
-  const eventos =
-    // await getCalendarEvents();
-    [
-      {
-        id: 0,
-        fecha: new Date(),
-        titulo: 'Evento de prueba',
-        lugar: 'Lugar de prueba',
-        descripcion: 'Descripción de prueba',
-      },
-      {
-        id: 0,
-        fecha: new Date(),
-        titulo: 'Evento de prueba',
-        lugar: 'Lugar de prueba',
-        descripcion: 'Descripción de prueba',
-      },
-      {
-        id: 0,
-        fecha: new Date(),
-        titulo: 'Evento de prueba',
-        lugar: 'Lugar de prueba',
-        descripcion: 'Descripción de prueba',
-      },
-      {
-        id: 0,
-        fecha: new Date(),
-        titulo: 'Evento de prueba',
-        lugar: 'Lugar de prueba',
-        descripcion: 'Descripción de prueba',
-      },
-      {
-        id: 0,
-        fecha: new Date(),
-        titulo: 'Evento de prueba',
-        lugar: 'Lugar de prueba',
-        descripcion: 'Descripción de prueba',
-      },
-      {
-        id: 0,
-        fecha: new Date(),
-        titulo: 'Evento de prueba',
-        lugar: 'Lugar de prueba',
-        descripcion: 'Descripción de prueba',
-      },
-    ];
+  const eventos = await getCalendarEvents();
 
   if (!eventos.length) {
     return (
